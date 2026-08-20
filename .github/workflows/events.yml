@@ -1,6 +1,11 @@
 name: eventos
-on: [push, pull_request, issues]
-
+#on: [push, pull_request, issues]
+on:
+    push:
+    pull_request:
+        types: [opened, synchronize, reopened, assigned]
+    issues:
+        types: [opened]
 jobs: 
     checkouts-tesst:
         runs-on: ubuntu-latest
